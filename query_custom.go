@@ -7,16 +7,15 @@ import (
 	SQLConn "github.com/bofen97/sqlc"
 )
 
-type QueryTopic struct {
+type QueryCustomTopic struct {
 	sqlc *SQLConn.SQLConn
 }
 
-func (qt *QueryTopic) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (qt *QueryCustomTopic) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "GET" {
 		topic := r.URL.Query().Get("topic")
-		date := r.URL.Query().Get("date")
-		//database query .
-		data, err := qt.sqlc.QueryTitleAuthorsSummaryId(topic, date)
+		//arxiv query .
+		data, err := qt.sqlc.QueryCustomTopicFromArxiv(topic)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 			fmt.Fprintf(w, "[ERROR] URL ERROR %v \n", err)
