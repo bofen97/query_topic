@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	SQLConn "github.com/bofen97/sqlc"
@@ -15,6 +16,7 @@ func (qt *QueryCustomTopic) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "GET" {
 		topic := r.URL.Query().Get("topic")
 		//arxiv query .
+		log.Printf("Got query [%s]\n", topic)
 		data, err := qt.sqlc.QueryCustomTopicFromArxiv(topic)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
