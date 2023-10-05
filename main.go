@@ -37,7 +37,7 @@ func main() {
 		log.Fatal(err)
 	}
 	go sr.ListenLaser()
-	go sr.PutServiceAddr("query_topic", serviceRegister.GetCurrentIP()+serverPort)
+	go sr.PutServiceAddr("query_topic", "query_topic"+serverPort)
 
 	lis, err := net.Listen("tcp", serverPort)
 	if err != nil {
