@@ -5,6 +5,7 @@ import (
 	"net"
 	"os"
 
+	serviceRegister "github.com/bofen97/ServiceRegister"
 	SQLConn "github.com/bofen97/sqlc"
 	"google.golang.org/grpc"
 )
@@ -22,6 +23,21 @@ func main() {
 		log.Fatal("serverPort is none")
 		return
 	}
+
+	etcdServer := os.Getenv("etcdserver")
+	if serverPort == "" {
+		log.Fatal("etcdServer is none")
+		return
+	}
+
+	sr, err := serviceRegister.NewRegisteService([]string{
+		etcdServer,
+	}, 5)
+	if err != nil {
+		log.Fatal(err)
+	}
+	go sr.ListenLaser()
+	go sr.PutServiceAddr("query_topic", "query_topic"+serverPort)
 
 	lis, err := net.Listen("tcp", serverPort)
 	if err != nil {
