@@ -6,8 +6,8 @@ github.com/bofen97/ServiceRegister v0.0.1 h1:5DK57rKXzK3ZMlLh8YIx9VsmWPj/ggNiKy1
 github.com/bofen97/ServiceRegister v0.0.1/go.mod h1:31EzBYJF/iPM0Q9JCfr5RBN66/GxR4kJgmYzMRCbFag=
 github.com/bofen97/musical-spoon v0.0.4 h1:y0JIULxGArf3HyD1VAoJpxuP6JbPRMQB7qL1ztBARuM=
 github.com/bofen97/musical-spoon v0.0.4/go.mod h1:cpuOtaOWiW6M4+rZlOYvQVpsvymtEH2lga9ziyy8bvY=
-github.com/bofen97/sqlc v0.0.8 h1:6jYqDvAzOH8laIXl1967rgHKl+GiT7V64QceF+PN2Ac=
-github.com/bofen97/sqlc v0.0.8/go.mod h1:mlybn7sILoAcg3ffkrqGUGdZot0jzJ03LkZhES1WS/8=
+github.com/bofen97/sqlc v0.0.9 h1:3JZwe0bSSnxFCUQiLl1B+kkXKaKja3OeMoyDIJ8LYjA=
+github.com/bofen97/sqlc v0.0.9/go.mod h1:mlybn7sILoAcg3ffkrqGUGdZot0jzJ03LkZhES1WS/8=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/cespare/xxhash/v2 v2.2.0 h1:DC2CZ1Ep5Y4k3ZQ899DldepgrayRUGE6BBZ/cd9Cj44=
 github.com/cespare/xxhash/v2 v2.2.0/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
