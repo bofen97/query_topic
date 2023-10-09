@@ -4,7 +4,7 @@ go 1.21.0
 
 require (
 	github.com/bofen97/ServiceRegister v0.0.1
-	github.com/bofen97/sqlc v0.0.8
+	github.com/bofen97/sqlc v0.0.9
 	google.golang.org/grpc v1.58.2
 	google.golang.org/protobuf v1.31.0
 )
